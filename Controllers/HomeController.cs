@@ -36,9 +36,9 @@ namespace MyTamagotchi.Controllers
                                                       int.Parse(Request.Form["attention"]),
                                                       int.Parse(Request.Form["rest"]));
             newTamagotchi.Save();
-            Tamagotchi myTama = Tamagotchi.GetTama();
+            
             //might need to edit this
-            return View("TamagotchiDetails", myTama);
+            return View("TamagotchiDetails", Tamagotchi.GetTama());
         }
 
         [HttpGet("/tamagotchi")]
