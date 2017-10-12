@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>My Tamagotchi</h1>
+  </div>
+<h3>Add a new Tamagotchi:</h3>
+<form action='/tamagotchi' method='post'>
+  <label for='petname'>Pet Name</label>
+  <input id='petname' name='petname' type='text'>
+  <label for='food'>Amt Of Food(lbs)</label>
+  <input id='food' name='food' type='number'>
+  <label for='attention'>Attention(mins)</label>
+  <input id='attention' name='attention' type='number'>
+  <label for='rest'>Rest(mins)</label>
+  <input id='rest' name='rest' type='number'>
+  <label for='pic'>Attach a pic of Tamagotchi</label>
+  <input id='pic' name='pic' type='text'>
+  <br>
+  <button type='submit'>Add Tamagotchi</button>
+</form>
+</div>

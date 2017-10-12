@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="jumbotron">
+  <h1>My Tamagotchi</h1>
+</div>
+<ul>
+  @foreach(var tamagotchi in Model)
+  {
+   <li><a href='/tamagotchis/@tamagotchi.GetId()'>@tamagotchi.GetName() </a></li>
+
+  }
+</ul>
+<p><a href="/tamagotchi/new">Add New tamagotchi</a></p>
+
+<form action="/tamagotchi/list/clear" method="post">
+  <button type="submit" name="button">Clear All tamagotchis</button>
+</form>

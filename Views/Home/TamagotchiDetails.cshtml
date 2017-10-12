@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+<div class="jumbotron">
+  <h1>My Tamagotchi</h1>
+</div>
+<h1>Amt of Food : @Model.GetFood()</h1>
+<form action='/feed' method='post'>
+<button type="submit" name="button">Feed Me</button>
+</form>
+<h1>Attention : @Model.GetAttention()</h1>
+<form action='/play' method='post'>
+<button type="submit" name="button">Play with Me</button>
+</form>
+<h1>Amt of Rest : @Model.GetRest()</h1>
+<form action='/sleep' method='post'>
+<button type="submit" name="button">Put me to Bed</button>
+</form>
+<img src="@Model.GetPic()" style="40%" alt="pic">
+<br>
+<br>
+<form action='/timepass' method='post'>
+<button type="submit" name="button">Time Pass</button>
+</form>
+
+<a href='/tamagotchi/new'>Add another Tamagotchi</a>
+<br>
+<a href='/tamagotchis'>View all Tamagotchis</a>
+</div>
